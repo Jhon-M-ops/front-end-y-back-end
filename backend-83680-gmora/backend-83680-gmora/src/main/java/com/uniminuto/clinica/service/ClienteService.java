@@ -1,0 +1,19 @@
+package com.uniminuto.clinica.service;
+
+import com.uniminuto.clinica.entity.Cliente;
+import com.uniminuto.clinica.models.ClienteRq;
+import com.uniminuto.clinica.models.MiRespuestaRS;
+import org.apache.coyote.BadRequestException;
+
+import java.util.List;
+
+public interface ClienteService {
+
+    List<Cliente> listarClientes();
+
+    MiRespuestaRS guardarCliente(ClienteRq clienteRq) throws BadRequestException;
+
+    MiRespuestaRS actualizarCliente(ClienteRq clienteRq) throws BadRequestException;
+
+    MiRespuestaRS eliminarCliente(ClienteRq clienteRq) throws BadRequestException;
+}
